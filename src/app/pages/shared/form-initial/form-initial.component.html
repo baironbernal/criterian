@@ -28,22 +28,31 @@
         Crear matriz
       </button>
       
-      <button type="reset" class="btn btn-light">Cancelar</button>
+      <button type="reset" class="btn btn-light" (click)="cancel()">Cancelar</button>
     </form>
+    <br><br>
 
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <table class="table" *ngIf="table.length">
       <thead>
         <tr>
+          <th></th>
           <th *ngFor="let thead of table[0]">Estado Natural No:  {{ thead }}</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let item of table">
-          <td *ngFor="let item2 of item">  
-              <input type="text" class="form-control" name="{{ item2 }}" placeholder="{{ item2 }}">
-          </td>
-        </tr>
+          <tr *ngFor="let item of table; index as i ">
+            <td>Desición</td>
+            <td *ngFor="let item2 of item; index as i2">  
+                <input type="text" 
+                  class="form-control"  
+                  name="{{i+','+i2}}"
+                  placeholder="{{ item2 }}" ngModel>
+            </td>
+          </tr>
       </tbody>
 
+      <button type=submit>Enviar</button>
     </table>
+  </form>

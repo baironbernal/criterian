@@ -6,7 +6,7 @@
               <p class="card-description">
                 Especifique los dos valores
               </p>
-              <app-form-initial></app-form-initial>
+              <app-form-initial (spread)="processSpread($event)"></app-form-initial>
             </div>
           </div>
         </div>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class OptimistComponent {
   title: string = 'Metodo Optimista';
+  data: any[] = [];
+
+  processSpread(t: any[]) {
+    this.data = t;
+    console.log("Evento padre con la información del hujo" , this.data)
+  }
 }

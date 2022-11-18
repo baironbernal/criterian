@@ -12,6 +12,7 @@ import { PessimistComponent } from './pages/pessimist/pessimist.component';
 import { HurwiczComponent } from './pages/hurwicz/hurwicz.component';
 import { FormInitialComponent } from './pages/shared/form-initial/form-initial.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
