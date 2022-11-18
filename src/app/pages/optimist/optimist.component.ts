@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./optimist.component.css']
 })
 export class OptimistComponent {
-
+  title: string = 'Metodo Optimista';
 }
